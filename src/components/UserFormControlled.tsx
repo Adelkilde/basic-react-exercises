@@ -43,7 +43,7 @@ export default function UserFormControlled({ onSubmitUser, defaultUser }: UserFo
       <form>
         ID: {user.id}
         <br />
-        First Name: <input name="name" onChange={handleChange} value={user.name} />
+        Name: <input name="name" onChange={handleChange} value={user.name} />
         <br />
         Email: <input name="email" onChange={handleChange} value={user.email} />
         <br />

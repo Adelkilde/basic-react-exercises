@@ -9,6 +9,8 @@ import StateDemo2 from "./exercises/StateDemo2";
 import StateDemo3 from "./exercises/StateDemo3";
 import UseEffectDemo from "./exercises/UseEffect";
 import FetchDemo from "./exercises/FetchDemo";
+import LiftingState from "./exercises/LiftingState";
+import ContextDemo from "./exercises/ContextDemo";
 
 export default function App() {
   const [selectedView, setSelectedView] = useState("info");
@@ -38,6 +40,8 @@ export default function App() {
             {selectedView == "state3" ? <StateDemo3 title="State Demo 3" /> : null}
             {selectedView == "useEffect" ? <UseEffectDemo title="UseEffect Demo" /> : null}
             {selectedView == "fetch" ? <FetchDemo title="Fetch Demo" /> : null}
+            {selectedView == "liftingState" ? <LiftingState title="Lifting State" /> : null}
+            {selectedView == "context" ? <ContextDemo title="Context Demo" /> : null}
             {/**Add the exercise components you create for each exercise using the key you used for the matching button  */}
           </div>
         </div>
@@ -49,7 +53,7 @@ type ButtonProps = {
   onSelected: (selected: string) => void;
 };
 const Buttons = (props: ButtonProps) => {
-  const { onSelected: handleSelected, btnStyle: btnStyle } = props;
+  const { onSelected: handleSelected } = props;
   return (
     <>
       <button className="btn-w100" onClick={() => handleSelected("info")}>
@@ -82,6 +86,12 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("fetch")}>
         Fetch demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("liftingState")}>
+        Lifting State
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("context")}>
+        Context demo
       </button>
     </>
   );
