@@ -23,7 +23,7 @@ export default function UserForm({ title, onSubmitUser }: UserFormProps) {
     <>
       <h2>{title}</h2>
       <form onSubmit={onSubmit}>
-        First Name: <input name="name" />
+        Name: <input name="name" />
         Email: <input name="email" />
         Active: <input type="checkbox" name="isActive" />
         <button type="submit">Add User</button>

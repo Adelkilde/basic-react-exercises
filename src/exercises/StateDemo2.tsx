@@ -23,7 +23,7 @@ export default function StateDemo2({ title }: BaseProps) {
       <div>
         <p>ID: {user.id}</p>{" "}
       </div>
-      First Name: <input name="name" value={user.name} onChange={handleNameChange} />
+      Name: <input name="name" value={user.name} onChange={handleNameChange} />
       Email: <input name="email" value={user.email} />
       Active: <input type="checkbox" checked={user.isActive} name="isActive" />
       <p style={{ marginTop: 15 }}> {JSON.stringify(user)} </p>

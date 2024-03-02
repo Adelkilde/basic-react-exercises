@@ -25,7 +25,7 @@ export default function UserForm2({ title, onSubmitUser }: UserFormProps) {
     <>
       <h2>{title}</h2>
       <form onSubmit={onSubmit}>
-        First Name: <input ref={nameRef} name="name" />
+        Name: <input ref={nameRef} name="name" />
         Email: <input ref={emailRef} name="email" />
         Active: <input ref={isActiveRef} type="checkbox" name="isActive" />
         <button type="submit">Add User</button>
